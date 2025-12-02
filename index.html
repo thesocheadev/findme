@@ -9,7 +9,46 @@
     <link rel="stylesheet" href="style.css">
     <title>សួស្តី</title>
 </head>
-<body>
-    <p>សួស្តីប្រជាជនកម្ពុជា!</p>
+<body class="light">
+
+<!-- Light/Dark Toggle -->
+<div class="toggle-btn" onclick="toggleMode()">
+    <div class="toggle-circle"></div>
+</div>
+
+<div class="container">
+    <h1>សួស្តីប្រជាជនកម្ពុជា!</h1>
+    <h3>My Portfolio</h3>
+    <p class="subtitle">Web Developer • Designer • Creator</p>
+
+    <h2>About Me</h2>
+    <p>Hello! I create modern websites and applications. This is my personal portfolio hosted on GitHub Pages.</p>
+
+    <h2>Social Media</h2>
+    <div class="social-links">
+        <a href="https://facebook.com/" target="_blank">Facebook</a>
+        <a href="https://t.me/" target="_blank">Telegram</a>
+        <a href="https://github.com/" target="_blank">GitHub</a>
+    </div>
+</div>
+
+<script>
+    function toggleMode() {
+        const body = document.body;
+        body.classList.toggle("dark");
+        body.classList.toggle("light");
+
+        // Save mode
+        localStorage.setItem("theme", body.classList.contains("dark") ? "dark" : "light");
+    }
+
+    // Load saved mode
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+        document.body.classList.remove("light", "dark");
+        document.body.classList.add(savedTheme);
+    }
+</script>
+
 </body>
 </html>
