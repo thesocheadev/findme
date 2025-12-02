@@ -11,24 +11,23 @@
 </head>
 <body class="light">
 
-<!-- Light/Dark Toggle -->
 <div class="toggle-btn" onclick="toggleMode()">
     <div class="toggle-circle"></div>
 </div>
 
 <div class="container">
     <h1>សួស្តីប្រជាជនកម្ពុជា!</h1>
-    <h3>My Portfolio</h3>
-    <p class="subtitle">Web Developer • Designer • Creator</p>
+    <h3>សាកល្បង</h3>
+    <p class="subtitle">សាកល្បង</p>
 
-    <h2>About Me</h2>
-    <p>Hello! I create modern websites and applications. This is my personal portfolio hosted on GitHub Pages.</p>
+    <h2>សាកល្បង</h2>
+    <p>ក ខ គ ឃ ង​ ច ឆ ជ ឈ ញ ដ ឋ ឌ ឍ ណ ត ថ ទ ថ ន ប ផ ព ភ ម យ រ ល វ ស ហ ឡ អ</p>
 
-    <h2>Social Media</h2>
+    <h2>សាកល្បង</h2>
     <div class="social-links">
-        <a href="https://facebook.com/" target="_blank">Facebook</a>
-        <a href="https://t.me/" target="_blank">Telegram</a>
-        <a href="https://github.com/" target="_blank">GitHub</a>
+        <a href="https://facebook.com/" target="_blank">សា</a>
+        <a href="https://t.me/" target="_blank">សាកល្បង</a>
+        <a href="https://github.com/" target="_blank">សាកល្បង</a>
     </div>
 </div>
 
@@ -38,11 +37,9 @@
         body.classList.toggle("dark");
         body.classList.toggle("light");
 
-        // Save mode
         localStorage.setItem("theme", body.classList.contains("dark") ? "dark" : "light");
     }
 
-    // Load saved mode
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
         document.body.classList.remove("light", "dark");

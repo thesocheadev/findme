@@ -5,78 +5,75 @@ body{
     padding: 0;
     transition: background 0.3s, color 0.3s;
 }
+body.light {
+    background: #f5f5f5;
+    color: #222;
+}
 
-    /* Light Mode */
-    body.light {
-        background: #f5f5f5;
-        color: #222;
+body.dark {
+    background: #121212;
+    color: #eaeaea;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+p.subtitle {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+.social-links a {
+    margin: 0 15px;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+body.light .social-links a { color: #222; }
+body.dark .social-links a { color: #eaeaea; }
+
+.social-links a:hover {
+    opacity: 0.6;
+}
+
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 55px;
+    height: 30px;
+    background: #999;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.toggle-circle {
+    width: 26px;
+    height: 26px;
+    background: white;
+    border-radius: 50%;
+    margin: 2px;
+    transition: 0.3s;
+}
+
+body.dark .toggle-btn {
+    background: #555;
     }
 
-    /* Dark Mode */
-    body.dark {
-        background: #121212;
-        color: #eaeaea;
-    }
-
-    .container {
-        max-width: 900px;
-        margin: auto;
-        padding: 40px 20px;
-        text-align: center;
-    }
-
-    h1 {
-        font-size: 42px;
-        margin-bottom: 10px;
-    }
-
-    p.subtitle {
-        font-size: 18px;
-        margin-bottom: 30px;
-        opacity: 0.8;
-    }
-
-    .social-links a {
-        margin: 0 15px;
-        font-size: 20px;
-        text-decoration: none;
-        font-weight: 600;
-        transition: 0.3s;
-    }
-
-    body.light .social-links a { color: #222; }
-    body.dark .social-links a { color: #eaeaea; }
-
-    .social-links a:hover {
-        opacity: 0.6;
-    }
-
-    .toggle-btn {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        width: 55px;
-        height: 30px;
-        background: #999;
-        border-radius: 20px;
-        cursor: pointer;
-        transition: 0.3s;
-    }
-
-    .toggle-circle {
-        width: 26px;
-        height: 26px;
-        background: white;
-        border-radius: 50%;
-        margin: 2px;
-        transition: 0.3s;
-    }
-
-    body.dark .toggle-btn {
-        background: #555;
-    }
-
-    body.dark .toggle-circle {
-        transform: translateX(25px);
-        background: #222;
-    }
+body.dark .toggle-circle {
+    transform: translateX(25px);
+    background: #222;
+}
